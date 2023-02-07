@@ -1,19 +1,40 @@
 ﻿namespace DatabaseSchemeParser
 {
-    using System;
+    using CsvHelper;
+    using CsvHelper.Configuration;
+    using DatabaseSchemeParser.Models;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.IO;
     using System.Linq;
 
     public class DatabaseSchemeReader
     {
-        IEnumerable<ImportedObject> ImportedObjects;
-
-        public IEnumerable<ImportedObject> ParseDatabaseSchemes(Stream fileToImport)
+        public IEnumerable<Database> ParseDatabaseSchemes(Stream databaseSchemeStream)
         {
-            ImportedObjects = new List<ImportedObject>() { new ImportedObject() };
+            IEnumerable<DatabaseSchemeRow> databaseSchemeRows;
 
-            var streamReader = new StreamReader(fileToImport);
+            var csvReaderConfiguration = new CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                MissingFieldFound = null,
+                Delimiter = ";"
+            };
+
+            using (var streamReader = new StreamReader(databaseSchemeStream))
+            {
+                using (var csvReader = new CsvReader(streamReader, csvReaderConfiguration))
+                {
+                    csvReader.Context.RegisterClassMap<DatabaseSchemeRowMapper>();
+
+                    databaseSchemeRows = csvReader.GetRecords<DatabaseSchemeRow>().ToList();
+                }
+            }
+
+            throw new System.NotImplementedException();
+
+            /*var ImportedObjects = new List<ImportedObject>() { new ImportedObject() };
+
+            var streamReader = new StreamReader(databaseSchemeStream);
 
             var importedLines = new List<string>();
             while (!streamReader.EndOfStream)
@@ -74,11 +95,11 @@
                 }
             }
 
-            return ImportedObjects;
+            return ImportedObjects;*/
         }
     }
 
-    public class ImportedObject : ImportedObjectBaseClass
+    /*public class ImportedObject : ImportedObjectBaseClass
     {
         public string Name
         {
@@ -103,5 +124,5 @@
     {
         public string Name { get; set; }
         public string Type { get; set; }
-    }
+    }*/
 }

@@ -16,5 +16,10 @@ W związku z powyższym potrzebuję zmienić klasy odpowiedzialne za przechowywa
 - Column,
 ponieważ w praktyce korzystają one z różnych zestawów pól (przykładowo bazy danych nie korzystają z pola odpowiadającego za możliwość korzystania z nulli).
 
+Po wprowadzeniu pierwszych testów wprowadziłbym następujące zmiany:
+- dodałbym interfejs IDeserializable, który będzie pomagał w testowaniu serializacji poszczególnych poziomów,
+- usunąłbym kolekcję parsowanych elementów z DatabaseSchemeParser i usunął efekty uboczne,
+- zastąpiłbym parsowanie informacji z pliku biblioteką CsvHelper, gdyż zmniejsza to ryzyko popełnienia błędu przy wczytywaniu pliku i jego ręcznym parsowaniu. W tym celu przygotowałbym nową klasę DatabaseSchemeRow, która byłaby odpowiedzialna za przechowywanie surowych danych, które następnie zostaną przekształcone do postaci Database -> Table -> Column,
+
 Poza tym zwróciłbym uwagę na:
 - niewykorzystywane "usingi" - proponowałbym usunąć wszystkie,

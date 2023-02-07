@@ -100,6 +100,7 @@
     <Content Include="SampleData\expectedSampleDatabaseSchemeData.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <Content Include="SampleData\sampleDatabaseSchemeData.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

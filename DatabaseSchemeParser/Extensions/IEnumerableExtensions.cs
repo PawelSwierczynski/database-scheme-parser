@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using DatabaseSchemeParser.Models;
+using System.Collections.Generic;
 
 namespace DatabaseSchemeParser.Extensions
 {
     public static class IEnumerableExtensions
     {
-        public static string Deserialize(this IEnumerable<ImportedObject> importedObjects)
+        public static string Deserialize(this IEnumerable<Database> importedObjects)
         {
             string importedObjectsDescription = "";
 
-            foreach (var database in importedObjects)
+            /*foreach (var database in importedObjects)
             {
                 if (database.Type == "DATABASE")
                 {
@@ -38,7 +39,7 @@ namespace DatabaseSchemeParser.Extensions
                         }
                     }
                 }
-            }
+            }*/
 
             return importedObjectsDescription;
         }
