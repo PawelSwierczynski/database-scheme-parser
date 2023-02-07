@@ -46,7 +46,7 @@ namespace DatabaseSchemeParser
 
         private IEnumerable<DatabaseSchemeRow> RemoveInvalidRecords(IEnumerable<DatabaseSchemeRow> databaseSchemeRows)
         {
-            return databaseSchemeRows.Where(x => validTypes.Contains(x?.Type));
+            return databaseSchemeRows.Where(r => validTypes.Contains(r?.Type));
         }
     }
 }

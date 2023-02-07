@@ -9,39 +9,40 @@ namespace DatabaseSchemeParser
         private const string databaseDataType = "DATABASE";
         private const string tableDataType = "TABLE";
         private const string columnDataType = "COLUMN";
+        private const string notNullableColumnSyntax = "0";
 
         public IEnumerable<Database> Convert(IEnumerable<DatabaseSchemeRow> databaseSchemeRows)
         {
-            var databases = databaseSchemeRows.Where(x => x.Type == databaseDataType).Select(x => new Database
+            var databases = databaseSchemeRows.Where(d => d.Type == databaseDataType).Select(d => new Database
             {
-                Name = x.Name,
+                Name = d.Name,
                 Tables = new List<Table>()
             }).ToList();
 
-            var tablesAssignedToDatabases = databaseSchemeRows.Where(x => x.Type == tableDataType && x.ParentType == databaseDataType)
-                .GroupBy(x => x.ParentName)
+            var tablesAssignedToDatabases = databaseSchemeRows.Where(t => t.Type == tableDataType && t.ParentType == databaseDataType)
+                .GroupBy(t => t.ParentName)
                 .Select(group => new
                 {
                     group.Key,
-                    Items = group.Select(x => new Table
+                    Items = group.Select(t => new Table
                     {
-                        Name = x.Name,
-                        Schema = x.Schema,
+                        Name = t.Name,
+                        Schema = t.Schema,
                         Columns = new List<Column>()
                     }).ToList()
                 }).ToList();
 
-            var columnsAssignedToTables = databaseSchemeRows.Where(x => x.Type == columnDataType && x.ParentType == tableDataType)
-                .GroupBy(x => x.ParentName)
+            var columnsAssignedToTables = databaseSchemeRows.Where(c => c.Type == columnDataType && c.ParentType == tableDataType)
+                .GroupBy(c => c.ParentName)
                 .Select(group => new
                 {
                     group.Key,
-                    Items = group.Select(x => new Column
+                    Items = group.Select(c => new Column
                     {
-                        Name = x.Name,
-                        Schema = x.Schema,
-                        DataType = x.DataType,
-                        IsNullable = x.IsNullable != "0"
+                        Name = c.Name,
+                        Schema = c.Schema,
+                        DataType = c.DataType,
+                        IsNullable = c.IsNullable != notNullableColumnSyntax
                     }).ToList()
                 }).ToList();
 

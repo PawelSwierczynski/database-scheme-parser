@@ -6,13 +6,13 @@ namespace DatabaseSchemeParser.Models
     {
         public DatabaseSchemeRowMapper()
         {
-            Map(x => x.Type).Name("Type");
-            Map(x => x.Name).Name("Name");
-            Map(x => x.Schema).Name("Schema");
-            Map(x => x.ParentName).Name("ParentName");
-            Map(x => x.ParentType).Name("ParentType");
-            Map(x => x.DataType).Name("DataType");
-            Map(x => x.IsNullable).Name("IsNullable");
+            Map(r => r.Type).Name("Type");
+            Map(r => r.Name).Name("Name");
+            Map(r => r.Schema).Name("Schema");
+            Map(r => r.ParentName).Name("ParentName");
+            Map(r => r.ParentType).Name("ParentType");
+            Map(r => r.DataType).Name("DataType");
+            Map(r => r.IsNullable).Name("IsNullable");
         }
     }
 }

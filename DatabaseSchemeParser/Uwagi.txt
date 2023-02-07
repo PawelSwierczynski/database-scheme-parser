@@ -31,4 +31,7 @@ Poza tym zwróciłbym uwagę na:
 	- czy możliwe jest otrzymanie listy z nieprawidłowo opisaną hierarchią (nieistniejący rodzic, kolumna przypisana bezpośrednio do bazy danych, itd.),
 	- czy nazwy i wartości dla poszczególnych rekordów mogą być zmieniane przez program,
 	- czy Schema dla kolumny i tabeli mogą się różnić (uważam, że nie powinny).
-- jakie jest zastosowanie etykiet dla kolumny DataType (jeśli nie są potrzebne, proponowałbym je usuwać).
+- jakie jest zastosowanie etykiet dla kolumny DataType (jeśli nie są potrzebne, proponowałbym je usuwać),
+- sposób, w jaki można by uzyskiwać dane do plików CSV. Jeśli nie zawsze będzie to ten sam plik w tej samej lokalizacji, możliwe, że lepiej by było umożliwić użytkownikowi wybór ścieżki do pliku poprzez argumenty dostarczane do metody Main,
+- umieszczanie kilku niezagnieżdżonych klas w jednym pliku,
+- konwencję nazewniczą i konsekwencję w jej stosowaniu.
