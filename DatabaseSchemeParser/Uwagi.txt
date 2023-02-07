@@ -26,3 +26,9 @@ Poza tym zwróciłbym uwagę na:
 - niewykorzystywane "usingi" - proponowałbym usunąć wszystkie,
 - enkapsulację,
 - weryfikację, czy jako argument został przekazany null,
+- dodatkowe możliwe corner case'y:
+	- czy możliwe jest otrzymanie listy z innymi wartościami typów niż DATABASE, TABLE lub COLUMN,
+	- czy możliwe jest otrzymanie listy z nieprawidłowo opisaną hierarchią (nieistniejący rodzic, kolumna przypisana bezpośrednio do bazy danych, itd.),
+	- czy nazwy i wartości dla poszczególnych rekordów mogą być zmieniane przez program,
+	- czy Schema dla kolumny i tabeli mogą się różnić (uważam, że nie powinny).
+- jakie jest zastosowanie etykiet dla kolumny DataType (jeśli nie są potrzebne, proponowałbym je usuwać).

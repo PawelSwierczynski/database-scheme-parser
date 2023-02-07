@@ -18,9 +18,9 @@
 
             databaseSchemeRows = dataCleaner.CleanDatabaseSchemeRows(databaseSchemeRows);
 
+            var databaseSchemeRowConverter = new DatabaseSchemeRowConverter();
 
-
-            throw new System.NotImplementedException();
+            return databaseSchemeRowConverter.Convert(databaseSchemeRows);
 
             /*for (int i = 0; i < importedLines.Count; i++)
             {

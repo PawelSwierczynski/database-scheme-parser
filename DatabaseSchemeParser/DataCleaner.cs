@@ -36,7 +36,7 @@ namespace DatabaseSchemeParser
                     databaseSchemeRow.Schema = databaseSchemeRow.Schema?.Trim().Replace(" ", "");
                     databaseSchemeRow.ParentName = databaseSchemeRow.ParentName?.Trim().Replace(" ", "");
                     databaseSchemeRow.ParentType = databaseSchemeRow.ParentType?.Trim().Replace(" ", "").ToUpper();
-                    databaseSchemeRow.DataType = databaseSchemeRow.DataType?.Trim().Replace(" ", "");
+                    databaseSchemeRow.DataType = databaseSchemeRow.DataType?.Trim();
                     databaseSchemeRow.IsNullable = databaseSchemeRow.IsNullable?.Trim().Replace(" ", "");
                 }
             }
