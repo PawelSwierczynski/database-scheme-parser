@@ -1,0 +1,1062 @@
+﻿Database 'AdventureWorks2016_EXT' (92 tables)
+	Table 'Sales.SalesTaxRate' (7 columns)
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'SalesTaxRateID' with int data type with no nulls
+		Column 'StateProvinceID' with int data type with no nulls
+		Column 'TaxRate' with smallmoney data type with no nulls
+		Column 'TaxType' with tinyint data type with no nulls
+	Table 'Sales.PersonCreditCard' (3 columns)
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'CreditCardID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+	Table 'Person.PersonPhone' (4 columns)
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'PhoneNumber' with Phone: nvarchar data type with no nulls
+		Column 'PhoneNumberTypeID' with int data type with no nulls
+	Table 'Sales.SalesTerritory' (10 columns)
+		Column 'CostLastYear' with money data type with no nulls
+		Column 'CostYTD' with money data type with no nulls
+		Column 'CountryRegionCode' with nvarchar data type with no nulls
+		Column 'Group' with nvarchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'SalesLastYear' with money data type with no nulls
+		Column 'SalesYTD' with money data type with no nulls
+		Column 'TerritoryID' with int data type with no nulls
+	Table 'Sales.SpecialOfferProduct_inmem' (0 columns)
+	Table 'Production.Product' (25 columns)
+		Column 'Class' with nchar data type accepts nulls
+		Column 'Color' with nvarchar data type accepts nulls
+		Column 'DaysToManufacture' with int data type with no nulls
+		Column 'DiscontinuedDate' with datetime data type accepts nulls
+		Column 'FinishedGoodsFlag' with Flag: bit data type with no nulls
+		Column 'ListPrice' with money data type with no nulls
+		Column 'MakeFlag' with Flag: bit data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'ProductLine' with nchar data type accepts nulls
+		Column 'ProductModelID' with int data type accepts nulls
+		Column 'ProductNumber' with nvarchar data type with no nulls
+		Column 'ProductSubcategoryID' with int data type accepts nulls
+		Column 'ReorderPoint' with smallint data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'SafetyStockLevel' with smallint data type with no nulls
+		Column 'SellEndDate' with datetime data type accepts nulls
+		Column 'SellStartDate' with datetime data type with no nulls
+		Column 'Size' with nvarchar data type accepts nulls
+		Column 'SizeUnitMeasureCode' with nchar data type accepts nulls
+		Column 'StandardCost' with money data type with no nulls
+		Column 'Style' with nchar data type accepts nulls
+		Column 'Weight' with decimal data type accepts nulls
+		Column 'WeightUnitMeasureCode' with nchar data type accepts nulls
+	Table 'Sales.SalesOrderHeader_inmem' (0 columns)
+	Table 'Sales.SalesTerritoryHistory' (6 columns)
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'EndDate' with datetime data type accepts nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'StartDate' with datetime data type with no nulls
+		Column 'TerritoryID' with int data type with no nulls
+	Table 'Production.ScrapReason' (3 columns)
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'ScrapReasonID' with smallint data type with no nulls
+	Table 'HumanResources.Shift' (5 columns)
+		Column 'EndTime' with time data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'ShiftID' with tinyint data type with no nulls
+		Column 'StartTime' with time data type with no nulls
+	Table 'Production.ProductCategory' (4 columns)
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'ProductCategoryID' with int data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+	Table 'Purchasing.ShipMethod' (6 columns)
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'ShipBase' with money data type with no nulls
+		Column 'ShipMethodID' with int data type with no nulls
+		Column 'ShipRate' with money data type with no nulls
+	Table 'Production.ProductCostHistory' (5 columns)
+		Column 'EndDate' with datetime data type accepts nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'StandardCost' with money data type with no nulls
+		Column 'StartDate' with datetime data type with no nulls
+	Table 'Sales.SalesOrderDetail_inmem' (0 columns)
+	Table 'Production.ProductDescription' (4 columns)
+		Column 'Description' with nvarchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductDescriptionID' with int data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+	Table 'Sales.ShoppingCartItem' (6 columns)
+		Column 'DateCreated' with datetime data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'Quantity' with int data type with no nulls
+		Column 'ShoppingCartID' with nvarchar data type with no nulls
+		Column 'ShoppingCartItemID' with int data type with no nulls
+	Table 'Production.ProductDocument' (3 columns)
+		Column 'DocumentNode' with hierarchyid data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+	Table 'dbo.DatabaseLog' (8 columns)
+		Column 'DatabaseLogID' with int data type with no nulls
+		Column 'DatabaseUser' with nvarchar data type with no nulls
+		Column 'Event' with nvarchar data type with no nulls
+		Column 'Object' with nvarchar data type accepts nulls
+		Column 'PostTime' with datetime data type with no nulls
+		Column 'Schema' with nvarchar data type accepts nulls
+		Column 'TSQL' with nvarchar data type with no nulls
+		Column 'XmlEvent' with xml data type with no nulls
+	Table 'Production.ProductInventory' (7 columns)
+		Column 'Bin' with tinyint data type with no nulls
+		Column 'LocationID' with smallint data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'Quantity' with smallint data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'Shelf' with nvarchar data type with no nulls
+	Table 'Sales.SpecialOffer' (11 columns)
+		Column 'Category' with nvarchar data type with no nulls
+		Column 'Description' with nvarchar data type with no nulls
+		Column 'DiscountPct' with smallmoney data type with no nulls
+		Column 'EndDate' with datetime data type with no nulls
+		Column 'MaxQty' with int data type accepts nulls
+		Column 'MinQty' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'SpecialOfferID' with int data type with no nulls
+		Column 'StartDate' with datetime data type with no nulls
+		Column 'Type' with nvarchar data type with no nulls
+	Table 'dbo.ErrorLog' (9 columns)
+		Column 'ErrorLine' with int data type accepts nulls
+		Column 'ErrorLogID' with int data type with no nulls
+		Column 'ErrorMessage' with nvarchar data type with no nulls
+		Column 'ErrorNumber' with int data type with no nulls
+		Column 'ErrorProcedure' with nvarchar data type accepts nulls
+		Column 'ErrorSeverity' with int data type accepts nulls
+		Column 'ErrorState' with int data type accepts nulls
+		Column 'ErrorTime' with datetime data type with no nulls
+		Column 'UserName' with nvarchar data type with no nulls
+	Table 'Sales.SpecialOffer_ondisk' (0 columns)
+	Table 'Production.ProductListPriceHistory' (5 columns)
+		Column 'EndDate' with datetime data type accepts nulls
+		Column 'ListPrice' with money data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'StartDate' with datetime data type with no nulls
+	Table 'Person.Address' (9 columns)
+		Column 'AddressID' with int data type with no nulls
+		Column 'AddressLine1' with nvarchar data type with no nulls
+		Column 'AddressLine2' with nvarchar data type accepts nulls
+		Column 'City' with nvarchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'PostalCode' with nvarchar data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'SpatialLocation' with geography data type accepts nulls
+		Column 'StateProvinceID' with int data type with no nulls
+	Table 'Sales.SpecialOfferProduct' (4 columns)
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'SpecialOfferID' with int data type with no nulls
+	Table 'Production.ProductModel' (6 columns)
+		Column 'CatalogDescription' with xml data type accepts nulls
+		Column 'Instructions' with xml data type accepts nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'ProductModelID' with int data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+	Table 'Person.AddressType' (4 columns)
+		Column 'AddressTypeID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+	Table 'Production.Product_ondisk' (0 columns)
+	Table 'Person.StateProvince' (8 columns)
+		Column 'CountryRegionCode' with nvarchar data type with no nulls
+		Column 'IsOnlyStateProvinceFlag' with Flag: bit data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'StateProvinceCode' with nchar data type with no nulls
+		Column 'StateProvinceID' with int data type with no nulls
+		Column 'TerritoryID' with int data type with no nulls
+	Table 'Production.ProductModelIllustration' (3 columns)
+		Column 'IllustrationID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductModelID' with int data type with no nulls
+	Table 'dbo.AWBuildVersion' (4 columns)
+		Column 'DatabaseVersion' with nvarchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'SystemInformationID' with tinyint data type with no nulls
+		Column 'VersionDate' with datetime data type with no nulls
+	Table 'Production.ProductModelProductDescriptionCulture' (4 columns)
+		Column 'CultureID' with nchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductDescriptionID' with int data type with no nulls
+		Column 'ProductModelID' with int data type with no nulls
+	Table 'Production.BillOfMaterials' (9 columns)
+		Column 'BillOfMaterialsID' with int data type with no nulls
+		Column 'BOMLevel' with smallint data type with no nulls
+		Column 'ComponentID' with int data type with no nulls
+		Column 'EndDate' with datetime data type accepts nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'PerAssemblyQty' with decimal data type with no nulls
+		Column 'ProductAssemblyID' with int data type accepts nulls
+		Column 'StartDate' with datetime data type with no nulls
+		Column 'UnitMeasureCode' with nchar data type with no nulls
+	Table 'Sales.Store' (6 columns)
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'Demographics' with xml data type accepts nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'SalesPersonID' with int data type accepts nulls
+	Table 'Production.ProductPhoto' (6 columns)
+		Column 'LargePhoto' with varbinary data type accepts nulls
+		Column 'LargePhotoFileName' with nvarchar data type accepts nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductPhotoID' with int data type with no nulls
+		Column 'ThumbNailPhoto' with varbinary data type accepts nulls
+		Column 'ThumbnailPhotoFileName' with nvarchar data type accepts nulls
+	Table 'Production.ProductProductPhoto' (4 columns)
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Primary' with Flag: bit data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'ProductPhotoID' with int data type with no nulls
+	Table 'Production.TransactionHistory' (9 columns)
+		Column 'ActualCost' with money data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'Quantity' with int data type with no nulls
+		Column 'ReferenceOrderID' with int data type with no nulls
+		Column 'ReferenceOrderLineID' with int data type with no nulls
+		Column 'TransactionDate' with datetime data type with no nulls
+		Column 'TransactionID' with int data type with no nulls
+		Column 'TransactionType' with nchar data type with no nulls
+	Table 'Production.ProductReview' (8 columns)
+		Column 'Comments' with nvarchar data type accepts nulls
+		Column 'EmailAddress' with nvarchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'ProductReviewID' with int data type with no nulls
+		Column 'Rating' with int data type with no nulls
+		Column 'ReviewDate' with datetime data type with no nulls
+		Column 'ReviewerName' with Name: nvarchar data type with no nulls
+	Table 'Person.BusinessEntity' (3 columns)
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+	Table 'Production.TransactionHistoryArchive' (9 columns)
+		Column 'ActualCost' with money data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'Quantity' with int data type with no nulls
+		Column 'ReferenceOrderID' with int data type with no nulls
+		Column 'ReferenceOrderLineID' with int data type with no nulls
+		Column 'TransactionDate' with datetime data type with no nulls
+		Column 'TransactionID' with int data type with no nulls
+		Column 'TransactionType' with nchar data type with no nulls
+	Table 'Production.ProductSubcategory' (5 columns)
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'ProductCategoryID' with int data type with no nulls
+		Column 'ProductSubcategoryID' with int data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+	Table 'Person.BusinessEntityAddress' (5 columns)
+		Column 'AddressID' with int data type with no nulls
+		Column 'AddressTypeID' with int data type with no nulls
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+	Table 'Sales.SpecialOfferProduct_ondisk' (0 columns)
+	Table 'Purchasing.ProductVendor' (11 columns)
+		Column 'AverageLeadTime' with int data type with no nulls
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'LastReceiptCost' with money data type accepts nulls
+		Column 'LastReceiptDate' with datetime data type accepts nulls
+		Column 'MaxOrderQty' with int data type with no nulls
+		Column 'MinOrderQty' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'OnOrderQty' with int data type accepts nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'StandardPrice' with money data type with no nulls
+		Column 'UnitMeasureCode' with nchar data type with no nulls
+	Table 'Person.BusinessEntityContact' (5 columns)
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'ContactTypeID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'PersonID' with int data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+	Table 'Production.UnitMeasure' (3 columns)
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'UnitMeasureCode' with nchar data type with no nulls
+	Table 'Purchasing.Vendor' (8 columns)
+		Column 'AccountNumber' with AccountNumber: nvarchar data type with no nulls
+		Column 'ActiveFlag' with Flag: bit data type with no nulls
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'CreditRating' with tinyint data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'PreferredVendorStatus' with Flag: bit data type with no nulls
+		Column 'PurchasingWebServiceURL' with nvarchar data type accepts nulls
+	Table 'Sales.SalesOrderHeader_ondisk' (0 columns)
+	Table 'Person.ContactType' (3 columns)
+		Column 'ContactTypeID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+	Table 'Sales.CountryRegionCurrency' (3 columns)
+		Column 'CountryRegionCode' with nvarchar data type with no nulls
+		Column 'CurrencyCode' with nchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+	Table 'Person.CountryRegion' (3 columns)
+		Column 'CountryRegionCode' with nvarchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+	Table 'Production.WorkOrder' (10 columns)
+		Column 'DueDate' with datetime data type with no nulls
+		Column 'EndDate' with datetime data type accepts nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'OrderQty' with int data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'ScrappedQty' with smallint data type with no nulls
+		Column 'ScrapReasonID' with smallint data type accepts nulls
+		Column 'StartDate' with datetime data type with no nulls
+		Column 'StockedQty' with int data type with no nulls
+		Column 'WorkOrderID' with int data type with no nulls
+	Table 'Purchasing.PurchaseOrderDetail' (11 columns)
+		Column 'DueDate' with datetime data type with no nulls
+		Column 'LineTotal' with money data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'OrderQty' with smallint data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'PurchaseOrderDetailID' with int data type with no nulls
+		Column 'PurchaseOrderID' with int data type with no nulls
+		Column 'ReceivedQty' with decimal data type with no nulls
+		Column 'RejectedQty' with decimal data type with no nulls
+		Column 'StockedQty' with decimal data type with no nulls
+		Column 'UnitPrice' with money data type with no nulls
+	Table 'Sales.CreditCard' (6 columns)
+		Column 'CardNumber' with nvarchar data type with no nulls
+		Column 'CardType' with nvarchar data type with no nulls
+		Column 'CreditCardID' with int data type with no nulls
+		Column 'ExpMonth' with tinyint data type with no nulls
+		Column 'ExpYear' with smallint data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+	Table 'Production.Culture' (3 columns)
+		Column 'CultureID' with nchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+	Table 'Production.WorkOrderRouting' (12 columns)
+		Column 'ActualCost' with money data type accepts nulls
+		Column 'ActualEndDate' with datetime data type accepts nulls
+		Column 'ActualResourceHrs' with decimal data type accepts nulls
+		Column 'ActualStartDate' with datetime data type accepts nulls
+		Column 'LocationID' with smallint data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'OperationSequence' with smallint data type with no nulls
+		Column 'PlannedCost' with money data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'ScheduledEndDate' with datetime data type with no nulls
+		Column 'ScheduledStartDate' with datetime data type with no nulls
+		Column 'WorkOrderID' with int data type with no nulls
+	Table 'Sales.Currency' (3 columns)
+		Column 'CurrencyCode' with nchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+	Table 'Purchasing.PurchaseOrderHeader' (13 columns)
+		Column 'EmployeeID' with int data type with no nulls
+		Column 'Freight' with money data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'OrderDate' with datetime data type with no nulls
+		Column 'PurchaseOrderID' with int data type with no nulls
+		Column 'RevisionNumber' with tinyint data type with no nulls
+		Column 'ShipDate' with datetime data type accepts nulls
+		Column 'ShipMethodID' with int data type with no nulls
+		Column 'Status' with tinyint data type with no nulls
+		Column 'SubTotal' with money data type with no nulls
+		Column 'TaxAmt' with money data type with no nulls
+		Column 'TotalDue' with money data type with no nulls
+		Column 'VendorID' with int data type with no nulls
+	Table 'Sales.CurrencyRate' (7 columns)
+		Column 'AverageRate' with money data type with no nulls
+		Column 'CurrencyRateDate' with datetime data type with no nulls
+		Column 'CurrencyRateID' with int data type with no nulls
+		Column 'EndOfDayRate' with money data type with no nulls
+		Column 'FromCurrencyCode' with nchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ToCurrencyCode' with nchar data type with no nulls
+	Table 'Sales.Customer' (7 columns)
+		Column 'AccountNumber' with varchar data type with no nulls
+		Column 'CustomerID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'PersonID' with int data type accepts nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'StoreID' with int data type accepts nulls
+		Column 'TerritoryID' with int data type accepts nulls
+	Table 'Sales.SalesOrderDetail_ondisk' (0 columns)
+	Table 'Sales.SalesOrder_json' (0 columns)
+	Table 'HumanResources.Department' (4 columns)
+		Column 'DepartmentID' with smallint data type with no nulls
+		Column 'GroupName' with Name: nvarchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+	Table 'Production.Document' (14 columns)
+		Column 'ChangeNumber' with int data type with no nulls
+		Column 'Document' with varbinary data type accepts nulls
+		Column 'DocumentLevel' with smallint data type accepts nulls
+		Column 'DocumentNode' with hierarchyid data type with no nulls
+		Column 'DocumentSummary' with nvarchar data type accepts nulls
+		Column 'FileExtension' with nvarchar data type with no nulls
+		Column 'FileName' with nvarchar data type with no nulls
+		Column 'FolderFlag' with bit data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Owner' with int data type with no nulls
+		Column 'Revision' with nchar data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'Status' with tinyint data type with no nulls
+		Column 'Title' with nvarchar data type with no nulls
+	Table 'Sales.SalesOrderDetail' (11 columns)
+		Column 'CarrierTrackingNumber' with nvarchar data type accepts nulls
+		Column 'LineTotal' with numeric data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'OrderQty' with smallint data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'SalesOrderDetailID' with int data type with no nulls
+		Column 'SalesOrderID' with int data type with no nulls
+		Column 'SpecialOfferID' with int data type with no nulls
+		Column 'UnitPrice' with money data type with no nulls
+		Column 'UnitPriceDiscount' with money data type with no nulls
+	Table 'Person.EmailAddress' (5 columns)
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'EmailAddress' with nvarchar data type accepts nulls
+		Column 'EmailAddressID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+	Table 'Person.Person_json' (0 columns)
+	Table 'Demo.DemoSalesOrderDetailSeed' (0 columns)
+	Table 'HumanResources.Employee' (16 columns)
+		Column 'BirthDate' with date data type with no nulls
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'CurrentFlag' with Flag: bit data type with no nulls
+		Column 'Gender' with nchar data type with no nulls
+		Column 'HireDate' with date data type with no nulls
+		Column 'JobTitle' with nvarchar data type with no nulls
+		Column 'LoginID' with nvarchar data type with no nulls
+		Column 'MaritalStatus' with nchar data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'NationalIDNumber' with nvarchar data type with no nulls
+		Column 'OrganizationLevel' with smallint data type accepts nulls
+		Column 'OrganizationNode' with hierarchyid data type accepts nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'SalariedFlag' with Flag: bit data type with no nulls
+		Column 'SickLeaveHours' with smallint data type with no nulls
+		Column 'VacationHours' with smallint data type with no nulls
+	Table 'Sales.SalesOrderHeader' (26 columns)
+		Column 'AccountNumber' with AccountNumber: nvarchar data type accepts nulls
+		Column 'BillToAddressID' with int data type with no nulls
+		Column 'Comment' with nvarchar data type accepts nulls
+		Column 'CreditCardApprovalCode' with varchar data type accepts nulls
+		Column 'CreditCardID' with int data type accepts nulls
+		Column 'CurrencyRateID' with int data type accepts nulls
+		Column 'CustomerID' with int data type with no nulls
+		Column 'DueDate' with datetime data type with no nulls
+		Column 'Freight' with money data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'OnlineOrderFlag' with Flag: bit data type with no nulls
+		Column 'OrderDate' with datetime data type with no nulls
+		Column 'PurchaseOrderNumber' with OrderNumber: nvarchar data type accepts nulls
+		Column 'RevisionNumber' with tinyint data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'SalesOrderID' with int data type with no nulls
+		Column 'SalesOrderNumber' with nvarchar data type with no nulls
+		Column 'SalesPersonID' with int data type accepts nulls
+		Column 'ShipDate' with datetime data type accepts nulls
+		Column 'ShipMethodID' with int data type with no nulls
+		Column 'ShipToAddressID' with int data type with no nulls
+		Column 'Status' with tinyint data type with no nulls
+		Column 'SubTotal' with money data type with no nulls
+		Column 'TaxAmt' with money data type with no nulls
+		Column 'TerritoryID' with int data type accepts nulls
+		Column 'TotalDue' with money data type with no nulls
+	Table 'Demo.DemoSalesOrderHeaderSeed' (0 columns)
+	Table 'Sales.CustomerPII' (0 columns)
+	Table 'HumanResources.EmployeeDepartmentHistory' (6 columns)
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'DepartmentID' with smallint data type with no nulls
+		Column 'EndDate' with date data type accepts nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'ShiftID' with tinyint data type with no nulls
+		Column 'StartDate' with date data type with no nulls
+	Table 'HumanResources.EmployeePayHistory' (5 columns)
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'PayFrequency' with tinyint data type with no nulls
+		Column 'Rate' with money data type with no nulls
+		Column 'RateChangeDate' with datetime data type with no nulls
+	Table 'Person.Person_Temporal' (0 columns)
+	Table 'Sales.SalesOrderHeaderSalesReason' (3 columns)
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'SalesOrderID' with int data type with no nulls
+		Column 'SalesReasonID' with int data type with no nulls
+	Table 'Person.Person_Temporal_History' (0 columns)
+	Table 'HumanResources.Employee_Temporal' (0 columns)
+	Table 'Sales.SalesPerson' (9 columns)
+		Column 'Bonus' with money data type with no nulls
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'CommissionPct' with smallmoney data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'SalesLastYear' with money data type with no nulls
+		Column 'SalesQuota' with money data type accepts nulls
+		Column 'SalesYTD' with money data type with no nulls
+		Column 'TerritoryID' with int data type accepts nulls
+	Table 'Production.Illustration' (3 columns)
+		Column 'Diagram' with xml data type accepts nulls
+		Column 'IllustrationID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+	Table 'Person.PhoneNumberType' (3 columns)
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'PhoneNumberTypeID' with int data type with no nulls
+	Table 'Sales.SpecialOffer_inmem' (0 columns)
+	Table 'HumanResources.Employee_Temporal_History' (0 columns)
+	Table 'HumanResources.JobCandidate' (4 columns)
+		Column 'BusinessEntityID' with int data type accepts nulls
+		Column 'JobCandidateID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Resume' with xml data type accepts nulls
+	Table 'Production.Location' (5 columns)
+		Column 'Availability' with decimal data type with no nulls
+		Column 'CostRate' with smallmoney data type with no nulls
+		Column 'LocationID' with smallint data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+	Table 'Sales.TrackingEvent' (0 columns)
+	Table 'Sales.OrderTracking' (0 columns)
+	Table 'Person.Password' (5 columns)
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'PasswordHash' with varchar data type with no nulls
+		Column 'PasswordSalt' with varchar data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+	Table 'Production.Product_inmem' (0 columns)
+	Table 'Sales.SalesPersonQuotaHistory' (5 columns)
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'QuotaDate' with datetime data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'SalesQuota' with money data type with no nulls
+	Table 'Person.Person' (13 columns)
+		Column 'AdditionalContactInfo' with xml data type accepts nulls
+		Column 'BusinessEntityID' with int data type with no nulls
+		Column 'Demographics' with xml data type accepts nulls
+		Column 'EmailPromotion' with int data type with no nulls
+		Column 'FirstName' with Name: nvarchar data type with no nulls
+		Column 'LastName' with Name: nvarchar data type with no nulls
+		Column 'MiddleName' with Name: nvarchar data type accepts nulls
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'NameStyle' with NameStyle: bit data type with no nulls
+		Column 'PersonType' with nchar data type with no nulls
+		Column 'rowguid' with uniqueidentifier data type with no nulls
+		Column 'Suffix' with nvarchar data type accepts nulls
+		Column 'Title' with nvarchar data type accepts nulls
+	Table 'Sales.SalesReason' (4 columns)
+		Column 'ModifiedDate' with datetime data type with no nulls
+		Column 'Name' with Name: nvarchar data type with no nulls
+		Column 'ReasonType' with Name: nvarchar data type with no nulls
+		Column 'SalesReasonID' with int data type with no nulls
+Database 'pubs' (0 tables)
+Database 'BaseballData' (25 tables)
+	Table 'dbo.seriespost' (9 columns)
+		Column 'yearID' with int data type with no nulls
+		Column 'round' with varchar data type with no nulls
+		Column 'teamIDwinner' with varchar data type accepts nulls
+		Column 'lgIDwinner' with varchar data type accepts nulls
+		Column 'teamIDloser' with varchar data type accepts nulls
+		Column 'lgIDloser' with varchar data type accepts nulls
+		Column 'wins' with int data type accepts nulls
+		Column 'losses' with int data type accepts nulls
+		Column 'ties' with int data type accepts nulls
+	Table 'dbo.halloffame' (8 columns)
+		Column 'hofID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'votedBy' with varchar data type accepts nulls
+		Column 'ballots' with int data type accepts nulls
+		Column 'needed' with int data type accepts nulls
+		Column 'votes' with int data type accepts nulls
+		Column 'inducted' with varchar data type accepts nulls
+		Column 'category' with varchar data type accepts nulls
+	Table 'dbo.allstarfull' (8 columns)
+		Column 'playerID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'gameNum' with int data type with no nulls
+		Column 'gameID' with varchar data type accepts nulls
+		Column 'teamID' with varchar data type accepts nulls
+		Column 'lgID' with varchar data type accepts nulls
+		Column 'GP' with int data type accepts nulls
+		Column 'startingPos' with int data type accepts nulls
+	Table 'dbo.teams' (48 columns)
+		Column 'yearID' with int data type with no nulls
+		Column 'lgID' with varchar data type with no nulls
+		Column 'teamID' with varchar data type with no nulls
+		Column 'franchID' with varchar data type accepts nulls
+		Column 'divID' with varchar data type accepts nulls
+		Column 'Rank' with int data type accepts nulls
+		Column 'G' with int data type accepts nulls
+		Column 'Ghome' with int data type accepts nulls
+		Column 'W' with int data type accepts nulls
+		Column 'L' with int data type accepts nulls
+		Column 'DivWin' with varchar data type accepts nulls
+		Column 'WCWin' with varchar data type accepts nulls
+		Column 'LgWin' with varchar data type accepts nulls
+		Column 'WSWin' with varchar data type accepts nulls
+		Column 'R' with int data type accepts nulls
+		Column 'AB' with int data type accepts nulls
+		Column 'H' with int data type accepts nulls
+		Column '2B' with int data type accepts nulls
+		Column '3B' with int data type accepts nulls
+		Column 'HR' with int data type accepts nulls
+		Column 'BB' with int data type accepts nulls
+		Column 'SO' with int data type accepts nulls
+		Column 'SB' with int data type accepts nulls
+		Column 'CS' with int data type accepts nulls
+		Column 'HBP' with int data type accepts nulls
+		Column 'SF' with int data type accepts nulls
+		Column 'RA' with int data type accepts nulls
+		Column 'ER' with int data type accepts nulls
+		Column 'ERA' with int data type accepts nulls
+		Column 'CG' with int data type accepts nulls
+		Column 'SHO' with int data type accepts nulls
+		Column 'SV' with int data type accepts nulls
+		Column 'IPouts' with int data type accepts nulls
+		Column 'HA' with int data type accepts nulls
+		Column 'HRA' with int data type accepts nulls
+		Column 'BBA' with int data type accepts nulls
+		Column 'SOA' with int data type accepts nulls
+		Column 'E' with int data type accepts nulls
+		Column 'DP' with int data type accepts nulls
+		Column 'FP' with int data type accepts nulls
+		Column 'name' with varchar data type accepts nulls
+		Column 'park' with varchar data type accepts nulls
+		Column 'attendance' with int data type accepts nulls
+		Column 'BPF' with int data type accepts nulls
+		Column 'PPF' with int data type accepts nulls
+		Column 'teamIDBR' with varchar data type accepts nulls
+		Column 'teamIDlahman45' with varchar data type accepts nulls
+		Column 'teamIDretro' with varchar data type accepts nulls
+	Table 'dbo.managers' (10 columns)
+		Column 'managerID' with varchar data type accepts nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'teamID' with varchar data type with no nulls
+		Column 'lgID' with varchar data type accepts nulls
+		Column 'inseason' with int data type with no nulls
+		Column 'G' with int data type accepts nulls
+		Column 'W' with int data type accepts nulls
+		Column 'L' with int data type accepts nulls
+		Column 'rank' with int data type accepts nulls
+		Column 'plyrMgr' with varchar data type accepts nulls
+	Table 'dbo.appearances' (20 columns)
+		Column 'yearID' with int data type with no nulls
+		Column 'teamID' with varchar data type with no nulls
+		Column 'lgID' with varchar data type accepts nulls
+		Column 'playerID' with varchar data type with no nulls
+		Column 'G_all' with int data type accepts nulls
+		Column 'G_batting' with int data type accepts nulls
+		Column 'G_defense' with int data type accepts nulls
+		Column 'G_p' with int data type accepts nulls
+		Column 'G_c' with int data type accepts nulls
+		Column 'G_1b' with int data type accepts nulls
+		Column 'G_2b' with int data type accepts nulls
+		Column 'G_3b' with int data type accepts nulls
+		Column 'G_ss' with int data type accepts nulls
+		Column 'G_lf' with int data type accepts nulls
+		Column 'G_cf' with int data type accepts nulls
+		Column 'G_rf' with int data type accepts nulls
+		Column 'G_of' with int data type accepts nulls
+		Column 'G_dh' with int data type accepts nulls
+		Column 'G_ph' with int data type accepts nulls
+		Column 'G_pr' with int data type accepts nulls
+	Table 'dbo.managershalf' (10 columns)
+		Column 'managerID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'teamID' with varchar data type with no nulls
+		Column 'lgID' with varchar data type accepts nulls
+		Column 'inseason' with int data type accepts nulls
+		Column 'half' with int data type with no nulls
+		Column 'G' with int data type accepts nulls
+		Column 'W' with int data type accepts nulls
+		Column 'L' with int data type accepts nulls
+		Column 'rank' with int data type accepts nulls
+	Table 'dbo.players' (33 columns)
+		Column 'lahmanID' with int data type with no nulls
+		Column 'playerID' with varchar data type accepts nulls
+		Column 'managerID' with varchar data type accepts nulls
+		Column 'hofID' with varchar data type accepts nulls
+		Column 'birthYear' with int data type accepts nulls
+		Column 'birthMonth' with int data type accepts nulls
+		Column 'birthDay' with int data type accepts nulls
+		Column 'birthCountry' with varchar data type accepts nulls
+		Column 'birthState' with varchar data type accepts nulls
+		Column 'birthCity' with varchar data type accepts nulls
+		Column 'deathYear' with int data type accepts nulls
+		Column 'deathMonth' with int data type accepts nulls
+		Column 'deathDay' with int data type accepts nulls
+		Column 'deathCountry' with varchar data type accepts nulls
+		Column 'deathState' with varchar data type accepts nulls
+		Column 'deathCity' with varchar data type accepts nulls
+		Column 'nameFirst' with varchar data type accepts nulls
+		Column 'nameLast' with varchar data type accepts nulls
+		Column 'nameNote' with varchar data type accepts nulls
+		Column 'nameGiven' with varchar data type accepts nulls
+		Column 'nameNick' with varchar data type accepts nulls
+		Column 'weight' with int data type accepts nulls
+		Column 'height' with int data type accepts nulls
+		Column 'bats' with varchar data type accepts nulls
+		Column 'throws' with varchar data type accepts nulls
+		Column 'debut' with varchar data type accepts nulls
+		Column 'finalGame' with varchar data type accepts nulls
+		Column 'college' with varchar data type accepts nulls
+		Column 'lahman40ID' with varchar data type accepts nulls
+		Column 'lahman45ID' with varchar data type accepts nulls
+		Column 'retroID' with varchar data type accepts nulls
+		Column 'holtzID' with varchar data type accepts nulls
+		Column 'bbrefID' with varchar data type accepts nulls
+	Table 'dbo.awardsmanagers' (6 columns)
+		Column 'managerID' with varchar data type with no nulls
+		Column 'awardID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'lgID' with varchar data type with no nulls
+		Column 'tie' with varchar data type accepts nulls
+		Column 'notes' with varchar data type accepts nulls
+	Table 'dbo.awardsplayers' (6 columns)
+		Column 'playerID' with varchar data type with no nulls
+		Column 'awardID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'lgID' with varchar data type with no nulls
+		Column 'tie' with varchar data type accepts nulls
+		Column 'notes' with varchar data type accepts nulls
+	Table 'dbo.awardssharemanagers' (7 columns)
+		Column 'awardID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'lgID' with varchar data type with no nulls
+		Column 'managerID' with varchar data type with no nulls
+		Column 'pointsWon' with int data type accepts nulls
+		Column 'pointsMax' with int data type accepts nulls
+		Column 'votesFirst' with int data type accepts nulls
+	Table 'dbo.awardsshareplayers' (7 columns)
+		Column 'awardID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'lgID' with varchar data type with no nulls
+		Column 'playerID' with varchar data type with no nulls
+		Column 'pointsWon' with int data type accepts nulls
+		Column 'pointsMax' with int data type accepts nulls
+		Column 'votesFirst' with int data type accepts nulls
+	Table 'dbo.teamsfranchises' (4 columns)
+		Column 'franchID' with varchar data type with no nulls
+		Column 'franchName' with varchar data type accepts nulls
+		Column 'active' with varchar data type accepts nulls
+		Column 'NAassoc' with varchar data type accepts nulls
+	Table 'dbo.batting' (24 columns)
+		Column 'playerID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'stint' with int data type with no nulls
+		Column 'teamID' with varchar data type accepts nulls
+		Column 'lgID' with varchar data type accepts nulls
+		Column 'G' with int data type accepts nulls
+		Column 'G_batting' with int data type accepts nulls
+		Column 'AB' with int data type accepts nulls
+		Column 'R' with int data type accepts nulls
+		Column 'H' with int data type accepts nulls
+		Column '2B' with int data type accepts nulls
+		Column '3B' with int data type accepts nulls
+		Column 'HR' with int data type accepts nulls
+		Column 'RBI' with int data type accepts nulls
+		Column 'SB' with int data type accepts nulls
+		Column 'CS' with int data type accepts nulls
+		Column 'BB' with int data type accepts nulls
+		Column 'SO' with int data type accepts nulls
+		Column 'IBB' with int data type accepts nulls
+		Column 'HBP' with int data type accepts nulls
+		Column 'SH' with int data type accepts nulls
+		Column 'SF' with int data type accepts nulls
+		Column 'GIDP' with int data type accepts nulls
+		Column 'G_old' with int data type accepts nulls
+	Table 'dbo.teamshalf' (10 columns)
+		Column 'yearID' with int data type with no nulls
+		Column 'lgID' with varchar data type with no nulls
+		Column 'teamID' with varchar data type with no nulls
+		Column 'Half' with varchar data type with no nulls
+		Column 'divID' with varchar data type accepts nulls
+		Column 'DivWin' with varchar data type accepts nulls
+		Column 'Rank' with int data type accepts nulls
+		Column 'G' with int data type accepts nulls
+		Column 'W' with int data type accepts nulls
+		Column 'L' with int data type accepts nulls
+	Table 'dbo.pitching' (30 columns)
+		Column 'playerID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'stint' with int data type with no nulls
+		Column 'teamID' with varchar data type accepts nulls
+		Column 'lgID' with varchar data type accepts nulls
+		Column 'W' with int data type accepts nulls
+		Column 'L' with int data type accepts nulls
+		Column 'G' with int data type accepts nulls
+		Column 'GS' with int data type accepts nulls
+		Column 'CG' with int data type accepts nulls
+		Column 'SHO' with int data type accepts nulls
+		Column 'SV' with int data type accepts nulls
+		Column 'IPouts' with int data type accepts nulls
+		Column 'H' with int data type accepts nulls
+		Column 'ER' with int data type accepts nulls
+		Column 'HR' with int data type accepts nulls
+		Column 'BB' with int data type accepts nulls
+		Column 'SO' with int data type accepts nulls
+		Column 'BAOpp' with int data type accepts nulls
+		Column 'ERA' with int data type accepts nulls
+		Column 'IBB' with int data type accepts nulls
+		Column 'WP' with int data type accepts nulls
+		Column 'HBP' with int data type accepts nulls
+		Column 'BK' with int data type accepts nulls
+		Column 'BFP' with int data type accepts nulls
+		Column 'GF' with int data type accepts nulls
+		Column 'R' with int data type accepts nulls
+		Column 'SH' with int data type accepts nulls
+		Column 'SF' with int data type accepts nulls
+		Column 'GIDP' with int data type accepts nulls
+	Table 'dbo.els_teamnames' (6 columns)
+		Column 'id' with int data type with no nulls
+		Column 'lgid' with varchar data type with no nulls
+		Column 'teamid' with varchar data type with no nulls
+		Column 'franchid' with varchar data type accepts nulls
+		Column 'name' with varchar data type accepts nulls
+		Column 'park' with varchar data type accepts nulls
+	Table 'dbo.battingpost' (22 columns)
+		Column 'yearID' with int data type with no nulls
+		Column 'round' with varchar data type with no nulls
+		Column 'playerID' with varchar data type with no nulls
+		Column 'teamID' with varchar data type accepts nulls
+		Column 'lgID' with varchar data type accepts nulls
+		Column 'G' with int data type accepts nulls
+		Column 'AB' with int data type accepts nulls
+		Column 'R' with int data type accepts nulls
+		Column 'H' with int data type accepts nulls
+		Column '2B' with int data type accepts nulls
+		Column '3B' with int data type accepts nulls
+		Column 'HR' with int data type accepts nulls
+		Column 'RBI' with int data type accepts nulls
+		Column 'SB' with int data type accepts nulls
+		Column 'CS' with int data type accepts nulls
+		Column 'BB' with int data type accepts nulls
+		Column 'SO' with int data type accepts nulls
+		Column 'IBB' with int data type accepts nulls
+		Column 'HBP' with int data type accepts nulls
+		Column 'SH' with int data type accepts nulls
+		Column 'SF' with int data type accepts nulls
+		Column 'GIDP' with int data type accepts nulls
+	Table 'dbo.pitchingpost' (30 columns)
+		Column 'playerID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'round' with varchar data type with no nulls
+		Column 'teamID' with varchar data type accepts nulls
+		Column 'lgID' with varchar data type accepts nulls
+		Column 'W' with int data type accepts nulls
+		Column 'L' with int data type accepts nulls
+		Column 'G' with int data type accepts nulls
+		Column 'GS' with int data type accepts nulls
+		Column 'CG' with int data type accepts nulls
+		Column 'SHO' with int data type accepts nulls
+		Column 'SV' with int data type accepts nulls
+		Column 'IPouts' with int data type accepts nulls
+		Column 'H' with int data type accepts nulls
+		Column 'ER' with int data type accepts nulls
+		Column 'HR' with int data type accepts nulls
+		Column 'BB' with int data type accepts nulls
+		Column 'SO' with int data type accepts nulls
+		Column 'BAOpp' with int data type accepts nulls
+		Column 'ERA' with int data type accepts nulls
+		Column 'IBB' with int data type accepts nulls
+		Column 'WP' with int data type accepts nulls
+		Column 'HBP' with int data type accepts nulls
+		Column 'BK' with int data type accepts nulls
+		Column 'BFP' with int data type accepts nulls
+		Column 'GF' with int data type accepts nulls
+		Column 'R' with int data type accepts nulls
+		Column 'SH' with int data type accepts nulls
+		Column 'SF' with int data type accepts nulls
+		Column 'GIDP' with int data type accepts nulls
+	Table 'dbo.fielding' (18 columns)
+		Column 'playerID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'stint' with int data type with no nulls
+		Column 'teamID' with varchar data type accepts nulls
+		Column 'lgID' with varchar data type accepts nulls
+		Column 'POS' with varchar data type with no nulls
+		Column 'G' with int data type accepts nulls
+		Column 'GS' with int data type accepts nulls
+		Column 'InnOuts' with int data type accepts nulls
+		Column 'PO' with int data type accepts nulls
+		Column 'A' with int data type accepts nulls
+		Column 'E' with int data type accepts nulls
+		Column 'DP' with int data type accepts nulls
+		Column 'PB' with int data type accepts nulls
+		Column 'WP' with int data type accepts nulls
+		Column 'SB' with int data type accepts nulls
+		Column 'CS' with int data type accepts nulls
+		Column 'ZR' with int data type accepts nulls
+	Table 'dbo.schoolsplayers' (4 columns)
+		Column 'playerID' with nvarchar data type with no nulls
+		Column 'schoolID' with nvarchar data type with no nulls
+		Column 'yearMin' with int data type accepts nulls
+		Column 'yearMax' with int data type accepts nulls
+	Table 'dbo.schools' (5 columns)
+		Column 'schoolID' with nvarchar data type with no nulls
+		Column 'schoolName' with nvarchar data type accepts nulls
+		Column 'schoolCity' with nvarchar data type accepts nulls
+		Column 'schoolState' with nvarchar data type accepts nulls
+		Column 'schoolNick' with nvarchar data type accepts nulls
+	Table 'dbo.salaries' (5 columns)
+		Column 'yearID' with int data type with no nulls
+		Column 'teamID' with varchar data type with no nulls
+		Column 'lgID' with varchar data type with no nulls
+		Column 'playerID' with varchar data type with no nulls
+		Column 'salary' with int data type accepts nulls
+	Table 'dbo.fieldingof' (6 columns)
+		Column 'playerID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'stint' with int data type with no nulls
+		Column 'Glf' with int data type accepts nulls
+		Column 'Gcf' with int data type accepts nulls
+		Column 'Grf' with int data type accepts nulls
+	Table 'dbo.fieldingpost' (17 columns)
+		Column 'playerID' with varchar data type with no nulls
+		Column 'yearID' with int data type with no nulls
+		Column 'teamID' with varchar data type accepts nulls
+		Column 'lgID' with varchar data type accepts nulls
+		Column 'round' with varchar data type with no nulls
+		Column 'POS' with varchar data type with no nulls
+		Column 'G' with int data type accepts nulls
+		Column 'GS' with int data type accepts nulls
+		Column 'InnOuts' with int data type accepts nulls
+		Column 'PO' with int data type accepts nulls
+		Column 'A' with int data type accepts nulls
+		Column 'E' with int data type accepts nulls
+		Column 'DP' with int data type accepts nulls
+		Column 'TP' with int data type accepts nulls
+		Column 'PB' with int data type accepts nulls
+		Column 'SB' with int data type accepts nulls
+		Column 'CS' with int data type accepts nulls
+Database 'WideWorldImporters' (0 tables)
+Database 'Northwind' (13 tables)
+	Table 'dbo.Employees' (18 columns)
+		Column 'Country' with nvarchar data type accepts nulls
+		Column 'HomePhone' with nvarchar data type accepts nulls
+		Column 'Extension' with nvarchar data type accepts nulls
+		Column 'Photo' with image data type accepts nulls
+		Column 'Notes' with ntext data type accepts nulls
+		Column 'ReportsTo' with int data type accepts nulls
+		Column 'PhotoPath' with nvarchar data type accepts nulls
+		Column 'PostalCode' with nvarchar data type accepts nulls
+		Column 'Region' with nvarchar data type accepts nulls
+		Column 'City' with nvarchar data type accepts nulls
+		Column 'Address' with nvarchar data type accepts nulls
+		Column 'HireDate' with datetime data type accepts nulls
+		Column 'BirthDate' with datetime data type accepts nulls
+		Column 'TitleOfCourtesy' with nvarchar data type accepts nulls
+		Column 'Title' with nvarchar data type accepts nulls
+		Column 'FirstName' with nvarchar data type with no nulls
+		Column 'LastName' with nvarchar data type with no nulls
+		Column 'EmployeeID' with int data type with no nulls
+	Table 'dbo.Categories' (4 columns)
+		Column 'CategoryID' with int data type with no nulls
+		Column 'CategoryName' with nvarchar data type with no nulls
+		Column 'Description' with ntext data type accepts nulls
+		Column 'Picture' with image data type accepts nulls
+	Table 'dbo.Customers' (11 columns)
+		Column 'CustomerID' with nchar data type with no nulls
+		Column 'CompanyName' with nvarchar data type with no nulls
+		Column 'ContactName' with nvarchar data type accepts nulls
+		Column 'ContactTitle' with nvarchar data type accepts nulls
+		Column 'Address' with nvarchar data type accepts nulls
+		Column 'City' with nvarchar data type accepts nulls
+		Column 'Region' with nvarchar data type accepts nulls
+		Column 'PostalCode' with nvarchar data type accepts nulls
+		Column 'Country' with nvarchar data type accepts nulls
+		Column 'Phone' with nvarchar data type accepts nulls
+		Column 'Fax' with nvarchar data type accepts nulls
+	Table 'dbo.Shippers' (3 columns)
+		Column 'ShipperID' with int data type with no nulls
+		Column 'CompanyName' with nvarchar data type with no nulls
+		Column 'Phone' with nvarchar data type accepts nulls
+	Table 'dbo.Suppliers' (12 columns)
+		Column 'SupplierID' with int data type with no nulls
+		Column 'CompanyName' with nvarchar data type with no nulls
+		Column 'ContactName' with nvarchar data type accepts nulls
+		Column 'ContactTitle' with nvarchar data type accepts nulls
+		Column 'Address' with nvarchar data type accepts nulls
+		Column 'City' with nvarchar data type accepts nulls
+		Column 'Region' with nvarchar data type accepts nulls
+		Column 'PostalCode' with nvarchar data type accepts nulls
+		Column 'Country' with nvarchar data type accepts nulls
+		Column 'Phone' with nvarchar data type accepts nulls
+		Column 'Fax' with nvarchar data type accepts nulls
+		Column 'HomePage' with ntext data type accepts nulls
+	Table 'dbo.Orders' (14 columns)
+		Column 'OrderID' with int data type with no nulls
+		Column 'CustomerID' with nchar data type accepts nulls
+		Column 'EmployeeID' with int data type accepts nulls
+		Column 'OrderDate' with datetime data type accepts nulls
+		Column 'RequiredDate' with datetime data type accepts nulls
+		Column 'ShippedDate' with datetime data type accepts nulls
+		Column 'ShipVia' with int data type accepts nulls
+		Column 'Freight' with money data type accepts nulls
+		Column 'ShipName' with nvarchar data type accepts nulls
+		Column 'ShipAddress' with nvarchar data type accepts nulls
+		Column 'ShipCity' with nvarchar data type accepts nulls
+		Column 'ShipRegion' with nvarchar data type accepts nulls
+		Column 'ShipPostalCode' with nvarchar data type accepts nulls
+		Column 'ShipCountry' with nvarchar data type accepts nulls
+	Table 'dbo.Products' (10 columns)
+		Column 'ProductID' with int data type with no nulls
+		Column 'ProductName' with nvarchar data type with no nulls
+		Column 'SupplierID' with int data type accepts nulls
+		Column 'CategoryID' with int data type accepts nulls
+		Column 'QuantityPerUnit' with nvarchar data type accepts nulls
+		Column 'UnitPrice' with money data type accepts nulls
+		Column 'UnitsInStock' with smallint data type accepts nulls
+		Column 'UnitsOnOrder' with smallint data type accepts nulls
+		Column 'ReorderLevel' with smallint data type accepts nulls
+		Column 'Discontinued' with bit data type with no nulls
+	Table 'dbo.OrderDetails' (5 columns)
+		Column 'OrderID' with int data type with no nulls
+		Column 'ProductID' with int data type with no nulls
+		Column 'UnitPrice' with money data type with no nulls
+		Column 'Quantity' with smallint data type with no nulls
+		Column 'Discount' with real data type with no nulls
+	Table 'dbo.CustomerCustomerDemo' (2 columns)
+		Column 'CustomerID' with nchar data type with no nulls
+		Column 'CustomerTypeID' with nchar data type with no nulls
+	Table 'dbo.CustomerDemographics' (2 columns)
+		Column 'CustomerTypeID' with nchar data type with no nulls
+		Column 'CustomerDesc' with ntext data type accepts nulls
+	Table 'dbo.Region' (2 columns)
+		Column 'RegionID' with int data type with no nulls
+		Column 'RegionDescription' with nchar data type with no nulls
+	Table 'dbo.Territories' (3 columns)
+		Column 'TerritoryID' with nvarchar data type with no nulls
+		Column 'TerritoryDescription' with nchar data type with no nulls
+		Column 'RegionID' with int data type with no nulls
+	Table 'dbo.EmployeeTerritories' (2 columns)
+		Column 'EmployeeID' with int data type with no nulls
+		Column 'TerritoryID' with nvarchar data type with no nulls

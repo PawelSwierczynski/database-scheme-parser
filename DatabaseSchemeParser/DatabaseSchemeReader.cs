@@ -2,16 +2,14 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Text;
     using System.IO;
     using System.Linq;
-    using System.Threading.Tasks;
 
-    public class DataReader
+    public class DatabaseSchemeReader
     {
         IEnumerable<ImportedObject> ImportedObjects;
 
-        public void ImportAndPrintData(string fileToImport, bool printData = true)
+        public IEnumerable<ImportedObject> ParseDatabaseSchemes(Stream fileToImport)
         {
             ImportedObjects = new List<ImportedObject>() { new ImportedObject() };
 
@@ -76,43 +74,11 @@
                 }
             }
 
-            foreach (var database in ImportedObjects)
-            {
-                if (database.Type == "DATABASE")
-                {
-                    Console.WriteLine($"Database '{database.Name}' ({database.NumberOfChildren} tables)");
-
-                    // print all database's tables
-                    foreach (var table in ImportedObjects)
-                    {
-                        if (table.ParentType?.ToUpper() == database.Type)
-                        {
-                            if (table.ParentName == database.Name)
-                            {
-                                Console.WriteLine($"\tTable '{table.Schema}.{table.Name}' ({table.NumberOfChildren} columns)");
-
-                                // print all table's columns
-                                foreach (var column in ImportedObjects)
-                                {
-                                    if (column.ParentType?.ToUpper() == table.Type)
-                                    {
-                                        if (column.ParentName == table.Name)
-                                        {
-                                            Console.WriteLine($"\t\tColumn '{column.Name}' with {column.DataType} data type {(column.IsNullable == "1" ? "accepts nulls" : "with no nulls")}");
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            Console.ReadLine();
+            return ImportedObjects;
         }
     }
 
-    class ImportedObject : ImportedObjectBaseClass
+    public class ImportedObject : ImportedObjectBaseClass
     {
         public string Name
         {
@@ -133,7 +99,7 @@
         public double NumberOfChildren;
     }
 
-    class ImportedObjectBaseClass
+    public class ImportedObjectBaseClass
     {
         public string Name { get; set; }
         public string Type { get; set; }

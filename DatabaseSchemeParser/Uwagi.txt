@@ -1,0 +1,20 @@
+Pierwszą rzeczą, którą chciałbym zaadresować, jest konwencja nazewnicza stosowana dla solucji. Uważam, że należy zmienić jej nazwę, jak i projektu, aby programista czytający kod miał prostsze zadanie w zrozumieniu jego celu. Ze względu na to, że główną funkcjonalnością kodu jest wczytywanie i wyświetlanie schematów baz danych, postanowiłem nazwać solucję i projekt "DatabaseSchemeParser".
+
+Po drugie, powyższy kod kompilował się, ale przy odczycie danych występowało kilka błędów. Przed przystąpieniem do refaktoryzacji postanowiłem je poprawić, aby uzyskać oczekiwany rezultat.
+
+Kolejnym krokiem przed refaktoryzacją jest upewnienie się, że moje zmiany nie sprawią, że wcześniej zaimplementowane funkcjonalności przedstaną działać. Z tego względu postanowiłem dodać projekty testowe, które będą odpowiedzialne za weryfikowanie, czy przygotowane zmiany nadal dają oczekiwane wyniki. Postanowiłem wykorzystać biblioteki NUnit i FluentAssertions.
+
+W związku z przygotowywaniem testów postanowiłem podzielić metodę ImportAndPrintData na:
+- ParseDatabaseSchemes, która będzie odpowiedzialna za parsowanie struktury baz danych z tekstu,
+- Deserialize(), które będzie odpowiedzialne za uzyskiwanie tekstu, który zostanie wyświetlony na konsoli. Będzie ona zaimplementowana dla każdego "poziomu".
+Jednym z powodów, dla których postanowiłem wprowadzić tę zmianę jest naruszenie zasady jednej odpowiedzialności - metoda nie powinna być odpowiedzialna zarówno za wczytywanie i wyświetlanie wyników. Dzięki temu łatwiej jest rozdzielić odpowiedzialność metody oraz napisać dla niej testy.
+Dodatkowo, metoda, która może wczytać dane i nie zmienić stanu obiektu z wyjątkiem kolekcji ImportedObjects jest niepraktyczne. Proponowałbym umożliwić zwrócenie uzyskanych obiektów oraz doprowadzić obie zaproponowane przeze mnie metody do stanu, gdzie nie będą wytwarzać efektów ubocznych.
+
+W związku z powyższym potrzebuję zmienić klasy odpowiedzialne za przechowywanie danych na następujące:
+- Database,
+- Table,
+- Column,
+ponieważ w praktyce korzystają one z różnych zestawów pól (przykładowo bazy danych nie korzystają z pola odpowiadającego za możliwość korzystania z nulli).
+
+Poza tym zwróciłbym uwagę na:
+- niewykorzystywane "usingi" - proponowałbym usunąć wszystkie,
