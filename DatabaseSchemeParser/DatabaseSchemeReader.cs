@@ -12,38 +12,17 @@
     {
         public IEnumerable<Database> ParseDatabaseSchemes(Stream databaseSchemeStream)
         {
-            IEnumerable<DatabaseSchemeRow> databaseSchemeRows;
+            IEnumerable<DatabaseSchemeRow> databaseSchemeRows = RetrieveDatabaseSchemeRows(databaseSchemeStream);
 
-            var csvReaderConfiguration = new CsvConfiguration(CultureInfo.InvariantCulture)
-            {
-                MissingFieldFound = null,
-                Delimiter = ";"
-            };
+            var dataCleaner = new DataCleaner();
 
-            using (var streamReader = new StreamReader(databaseSchemeStream))
-            {
-                using (var csvReader = new CsvReader(streamReader, csvReaderConfiguration))
-                {
-                    csvReader.Context.RegisterClassMap<DatabaseSchemeRowMapper>();
+            databaseSchemeRows = dataCleaner.CleanDatabaseSchemeRows(databaseSchemeRows);
 
-                    databaseSchemeRows = csvReader.GetRecords<DatabaseSchemeRow>().ToList();
-                }
-            }
+
 
             throw new System.NotImplementedException();
 
-            /*var ImportedObjects = new List<ImportedObject>() { new ImportedObject() };
-
-            var streamReader = new StreamReader(databaseSchemeStream);
-
-            var importedLines = new List<string>();
-            while (!streamReader.EndOfStream)
-            {
-                var line = streamReader.ReadLine();
-                importedLines.Add(line);
-            }
-
-            for (int i = 0; i < importedLines.Count; i++)
+            /*for (int i = 0; i < importedLines.Count; i++)
             {
                 var importedLine = importedLines[i];
 
@@ -97,32 +76,24 @@
 
             return ImportedObjects;*/
         }
-    }
 
-    /*public class ImportedObject : ImportedObjectBaseClass
-    {
-        public string Name
+        private IEnumerable<DatabaseSchemeRow> RetrieveDatabaseSchemeRows(Stream databaseSchemeStream)
         {
-            get;
-            set;
+            var csvReaderConfiguration = new CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                MissingFieldFound = null,
+                Delimiter = ";"
+            };
+
+            using (var streamReader = new StreamReader(databaseSchemeStream))
+            {
+                using (var csvReader = new CsvReader(streamReader, csvReaderConfiguration))
+                {
+                    csvReader.Context.RegisterClassMap<DatabaseSchemeRowMapper>();
+
+                    return csvReader.GetRecords<DatabaseSchemeRow>().ToList();
+                }
+            }
         }
-        public string Schema;
-
-        public string ParentName;
-        public string ParentType
-        {
-            get; set;
-        }
-
-        public string DataType { get; set; }
-        public string IsNullable { get; set; }
-
-        public double NumberOfChildren;
     }
-
-    public class ImportedObjectBaseClass
-    {
-        public string Name { get; set; }
-        public string Type { get; set; }
-    }*/
 }

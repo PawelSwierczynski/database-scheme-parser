@@ -83,6 +83,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataCleaner.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Models\Column.cs" />
     <Compile Include="Models\Database.cs" />

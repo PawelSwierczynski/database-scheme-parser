@@ -1,6 +1,7 @@
 ﻿using DatabaseSchemeParser.Extensions;
 using FluentAssertions;
 using NUnit.Framework;
+using System;
 using System.IO;
 
 namespace DatabaseSchemeParser.Tests.Integration
@@ -11,7 +12,18 @@ namespace DatabaseSchemeParser.Tests.Integration
         private const string sampleDatabaseSchemeDataFilepath = "SampleData/sampleDatabaseSchemeData.csv";
 
         [Test]
-        public void ParseDatabaseSchemes_DatabaseSchemeTextIsEmpty_ReturnsEmptyList()
+        public void ParseDatabaseSchemes_DatabaseSchemeStreamIsNull_ThrowsArgumentNullException()
+        {
+            Stream databaseSchemeStream = null;
+            var databaseSchemeReader = new DatabaseSchemeReader();
+
+            Action parsingDatabaseSchemes = () => databaseSchemeReader.ParseDatabaseSchemes(databaseSchemeStream);
+
+            parsingDatabaseSchemes.Should().ThrowExactly<ArgumentNullException>();
+        }
+
+        [Test]
+        public void ParseDatabaseSchemes_DatabaseSchemeStreamIsEmpty_ReturnsEmptyList()
         {
             var databaseSchemeStream = new MemoryStream();
             var databaseSchemeReader = new DatabaseSchemeReader();
@@ -22,7 +34,7 @@ namespace DatabaseSchemeParser.Tests.Integration
         }
 
         [Test]
-        public void ParseDatabaseSchemes_DatabaseSchemeIsNotEmpty_ReturnsCorrectList()
+        public void ParseDatabaseSchemes_DatabaseSchemeStreamIsNotEmpty_ReturnsCorrectList()
         {
             var expected = File.ReadAllText(expectedSampleDatabaseSchemeDataFilepath);
             var databaseSchemeStream = new FileStream(sampleDatabaseSchemeDataFilepath, FileMode.Open, FileAccess.Read);
